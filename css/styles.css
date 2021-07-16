@@ -68,8 +68,9 @@ body{
 }
 @media screen and (min-width:1024px) {
   .cards{
+    width: 80%;
     display: grid;
-    gap: 20px;
+    gap: 30px;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
   }
@@ -90,13 +91,15 @@ body{
     height: 275px;
   }
   .card:first-child,
-  .card:nth-child(3){
+  .card:last-child{
     grid-row:  span 2;
     place-self: center center;
   }
-  .card:last-child{
+  .card:nth-child(3){
+    grid-row: 2/3;
     grid-column: 2/3;
   }
+  
 }
 .card__info{
   color: var(--Grayish-Blue);
