@@ -15,6 +15,18 @@ body{
   font-family: 'Poppins', sans-serif;
   background-color: var(--Very-Light-Gray);
   padding-bottom: 5em;
+  scroll-behavior: smooth;
+}
+@media screen and (min-width:1024px) {
+  body::-webkit-scrollbar{
+    width: 7px;
+    background-color: var(--Blue);
+    border-radius: 5px;
+  }
+  body::-webkit-scrollbar-thumb{
+    background-color: var(--Orange);
+    border-radius: 5px;
+  }
 }
 .main__title{
   font-size: 1.5rem;
@@ -23,6 +35,11 @@ body{
   flex-direction: column;
   align-items: center;
   color: var(--Grayish-Blue);
+}
+@media screen and (min-width:1024px) {
+  .main__title{
+    font-size: 2.5rem;
+  }
 }
 .text--strong,
 .card__title{
@@ -37,12 +54,25 @@ body{
   line-height: 1.5em;
   color: var(--Grayish-Blue);
 }
+@media screen and (min-width:1024px) {
+  .main__info{
+    width: 30%;
+  }
+}
 
 .cards{
   margin-top: 50px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width:1024px) {
+  .cards{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+  }
 }
 
 .card{
@@ -54,6 +84,16 @@ body{
   margin-bottom: 2em;
   border-radius: 10px;
   box-shadow:  3px 5px 8px rgb( 0 0 0 /0.25);
+}
+@media screen and (min-width:1024px) {
+  .card:first-child,
+  .card:nth-child(3){
+    grid-row:  span 2;
+    place-self: center center;
+  }
+  .card:last-child{
+    grid-column: 2/3;
+  }
 }
 .card__info{
   color: var(--Grayish-Blue);
@@ -75,3 +115,4 @@ body{
 .card--blue{
   border-top: 4px solid var(--Blue);
 }
+
